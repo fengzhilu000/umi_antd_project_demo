@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "jsx": "react",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components": ["./src/components"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "webpack", "scripts", "public"]
+}
+// {
+//   "compilerOptions": {
+//     "target": "esnext",
+//     "module": "esnext",
+//     "moduleResolution": "node",
+//     "importHelpers": true,
+//     "jsx": "react",
+//     "esModuleInterop": true,
+//     "sourceMap": true,
+//     "baseUrl": "./",
+//     "strict": true,
+//     "paths": {
+//       "@/*": ["src/*"],
+//       "@@/*": ["src/.umi/*"]
+//     },
+//     "allowSyntheticDefaultImports": true
+//   },
+//   "include": [
+//     "mock/**/*",
+//     "src/**/*",
+//     "config/**/*",
+//     ".umirc.ts",
+//     "typings.d.ts"
+//   ]
+// }

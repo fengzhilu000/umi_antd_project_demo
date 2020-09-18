@@ -1,0 +1,41 @@
+
+.title {
+  background: rgb(214, 242, 121);
+}
+.content-container{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: row;
+  .left-block-container{
+      width:25%;
+      height:100%;
+      padding:0px 5px;
+  }
+
+  .middle-block-container{
+      width:50%;
+      height:100%;
+      display: flex;
+      flex-direction: column;
+      .globe-region-container{
+          height:75%;
+          width:100%;
+          &>div{
+              width:100%;
+              height:100%;
+          }
+      }
+      .bottom-region-container{
+          height:25%;
+          width:100%;
+          padding: 5px 0px 0px 0px;
+      }
+  }
+
+  .right-block-container{
+      width:25%;
+      height:100%;
+      padding:0px 5px;
+  }
+}

@@ -1,0 +1,68 @@
+
+.title {
+  background: rgb(121, 224, 242);
+}
+
+.content-container{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+
+  .upper-row-container{
+      width: 100%;
+      height:70%;
+      display: flex;
+      flex-direction: row;
+      .left-column-container{
+          height:100%;
+          width:25%;
+          padding: 0px 5px;
+          display:flex;
+          flex-direction: column;
+
+          .year-strip-pick-schedule-container{
+              width:100%;
+              height:60%;
+              padding:5px 0px;
+          }
+          .general-progress-container{
+              width:100%;
+              height:40%;
+          }
+      }
+      .globe-region{
+          height:100%;
+          width:75%;
+          padding:0px 5px 0px 0px;
+
+          &>div{
+              width:100%;
+              height:100%;
+          }
+
+          // canvas{
+          //     width:100%;
+          //     height:100%;
+          // }
+      }
+  }
+
+  .lower-row-container{
+      width: 100%;
+      height:30%;
+      display: flex;
+      flex-direction: row;
+      .month-strip-pick-schedule-container{
+          height:100%;
+          padding:5px;
+          width:50%
+      }
+
+      .digger-progress-container{
+          height:100%;
+          width:50%;
+          padding:5px 5px 5px 0px;
+      }
+  }
+}

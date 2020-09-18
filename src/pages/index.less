@@ -1,0 +1,58 @@
+.main-view {
+  // background: rgb(121, 242, 157);
+  margin: auto 0;
+  text-align: center;
+
+  .return{
+    width: 240px;
+    height:40px;
+    text-align: right;
+    // margin: 0px 32px 0 0px;
+    // margin: auto;
+    text-indent: 15px;
+    line-height: 40px;
+    vertical-align: middle;
+    font-size: 20px;
+    color: rgba(2,255,255,1);
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    /* justify-items: center; */
+    /* text-align: center; */
+    margin: auto;
+
+    .left-icon{
+        transform: rotate(180deg);
+        margin: auto;
+    }
+
+    .right-icon{
+      margin: auto;
+    }
+  }
+
+  @keyframes blink-animation {
+      to {
+        color: #1BACE6;
+      }
+    }
+    @-webkit-keyframes blink-animation {
+      to {
+          color: #1BACE6;
+      }
+  }
+
+  .return:hover{
+      color: rgba(2,255,255,1);
+      .iconfont{
+          color: rgba(2,255,255,1);
+      }
+  }
+}
+
+.content {
+  height: 100%;
+
+}

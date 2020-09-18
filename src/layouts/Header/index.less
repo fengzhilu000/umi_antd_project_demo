@@ -1,0 +1,126 @@
+
+// .title {
+//   background: rgb(155, 242, 121);
+// }
+
+.nav-box {
+  display: flex;
+  // height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+
+  :global {
+    .rc-menu-horizontal {
+      background: transparent;
+      font-size: 20px;
+      color: white;
+      border-bottom: none;
+    }
+
+    .rc-menu-horizontal>.rc-menu-submenu-active,
+    .rc-menu-horizontal>.rc-menu-item-active {
+      border-bottom: 2px solid #00e1fc;
+      background-color: transparent;
+      color: red;//#00e1fc;
+    }
+
+    .rc-menu-horizontal>.rc-menu-item-selected {
+      background-color: transparent;
+      transform: none;
+      border-bottom: 2px solid #00e1fc;
+      padding-bottom: 5px;
+
+      a {
+        color: #00e1fc;
+      }
+    }
+
+    .rc-menu-vertical>.rc-menu-item {
+      //display: inline;
+      font-size: 18px;
+      left: 0px;
+    }
+
+    .rc-menu-vertical>.rc-menu-item-selected {
+      //background: linear-gradient(rgb(255,255,255,0), rgb(46,222,255,1));
+      background: #074b84;
+      border-radius: 4px;
+      transform: none;
+
+      a {
+        color: #00e1fc;
+      }
+    }
+
+    .rc-menu-horizontal>.rc-menu-submenu-selected {
+      background-color: transparent;
+      transform: none;
+      border-bottom: 2px solid #00e1fc;
+
+      a {
+        color: #00e1fc;
+      }
+    }
+
+    a {
+      color: white;
+    }
+
+    .rc-menu-item-active,
+    .rc-menu-submenu-active>.rc-menu-submenu-title {
+      background-color: transparent;
+    }
+
+    .rc-menu-submenu>.rc-menu {
+      //background-color: transparent;
+      border: none;
+      box-shadow: none;
+    }
+
+    .rc-menu-horizontal>.rc-menu-item,
+    .rc-menu-horizontal>.rc-menu-submenu>.rc-menu-submenu-title {
+      padding: 13px 20px 7px;
+      width: 140px;
+      text-align: center;
+    }
+
+    .rc-menu-horizontal.rc-menu-sub,
+    .rc-menu-vertical.rc-menu-sub,
+    .rc-menu-vertical-left.rc-menu-sub,
+    .rc-menu-vertical-right.rc-menu-sub {
+      min-width: 140px;
+      background: #074b84;
+    }
+
+    .rc-menu-vertical>.rc-menu-item,
+    .rc-menu-vertical-left>.rc-menu-item,
+    .rc-menu-vertical-right>.rc-menu-item,
+    .rc-menu-inline>.rc-menu-item,
+    .rc-menu-vertical>.rc-menu-submenu>.rc-menu-submenu-title,
+    .rc-menu-vertical-left>.rc-menu-submenu>.rc-menu-submenu-title,
+    .rc-menu-vertical-right>.rc-menu-submenu>.rc-menu-submenu-title,
+    .rc-menu-inline>.rc-menu-submenu>.rc-menu-submenu-title {
+      //background: #074B84;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .rc-menu-vertical>.rc-menu-item,
+    .rc-menu-vertical-left>.rc-menu-item,
+    .rc-menu-vertical-right>.rc-menu-item,
+    .rc-menu-inline>.rc-menu-item,
+    .rc-menu-vertical>.rc-menu-submenu>.rc-menu-submenu-title,
+    .rc-menu-vertical-left>.rc-menu-submenu>.rc-menu-submenu-title,
+    .rc-menu-vertical-right>.rc-menu-submenu>.rc-menu-submenu-title,
+    .rc-menu-inline>.rc-menu-submenu>.rc-menu-submenu-title {
+      padding: 12px 8px 12px 8px;
+    }
+
+    .rc-menu-submenu-popup {
+      position: absolute;
+      //z-index: 1001;
+    }
+  }
+}
