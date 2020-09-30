@@ -3,7 +3,7 @@
  * @Author: xfGuo
  * @Date: 2020-09-04 13:51:14
  * @LastEditors: xfGuo
- * @LastEditTime: 2020-09-05 10:16:34
+ * @LastEditTime: 2020-09-30 10:21:51
  */
 import React,{ Component } from 'react';
 import styles from './index.less';
@@ -15,6 +15,7 @@ import { history } from 'umi';
 // import { render } from 'react-dom';
 import { connect } from 'dva';
 
+import PageIndex from '@/pages/HelloWorld/index';
 import EarthLayout from './Earth/index';
 import Earth2Layout from './Earth2/index';
 
@@ -39,11 +40,12 @@ class Index extends Component {
     const maps = {
       index: EarthLayout,
       earth: Earth2Layout,
+      pageIndex: PageIndex,
     };
   
     if(maps.hasOwnProperty(activePage)==false)
     {
-      activePage = 'ProductionProgress';
+      activePage = 'pageIndex';
     }
   
     return maps[activePage];
@@ -74,7 +76,7 @@ class Index extends Component {
         <portals.InPortal node={this.portalNode}>
           <Earth onRef={(ref) => { this.NscEarthRef = ref }} />
         </portals.InPortal>
-        {ModuleLayout ? <ModuleLayout portalNode={this.portalNode}></ModuleLayout> : <React.Fragment></React.Fragment>}
+        {ModuleLayout !== undefined ? <ModuleLayout portalNode={this.portalNode}></ModuleLayout> : <pageIndex></pageIndex>}
       </div>
     );
   }

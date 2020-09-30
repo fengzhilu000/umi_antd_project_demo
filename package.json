@@ -1,8 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "start": "umi dev",
-    "build": "umi build",
+    "start": "cross-env umi dev",
+    "build": "cross-env umi build",
+    "start:wh_test": "cross-env UMI_ENV=wh_test PROJECT=WH_PROJECT DesignWidth=1920 DesignHeight=1080 umi dev",
+    "start:cs_test": "cross-env UMI_ENV=cs_test PROJECT=CS_PROJECT DesignWidth=3840 DesignHeight=2160 umi dev",
+    "build:wh_product": "cross-env UMI_ENV=wh_product PROJECT=WH_PROJECT DesignWidth=1920 DesignHeight=1080 umi build",
+    "build:cs_product": "cross-env UMI_ENV=cs_product PROJECT=CS_PROJECT DesignWidth=3840 DesignHeight=2160 umi build",
     "postinstall": "umi generate tmp",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
@@ -26,7 +30,7 @@
     "@umijs/test": "^3.2.19",
     "antd": "^4.6.2",
     "cesium": "^1.73.0",
-    "cross-env": "^7.0.2",
+    "cross-env": "7.0.2",
     "lint-staged": "^10.0.7",
     "nsc-earth": "^0.0.55",
     "prettier": "^1.19.1",

@@ -1,5 +1,12 @@
+/*
+ * @Description: 
+ * @Author: xfGuo
+ * @Date: 2020-09-04 16:08:08
+ * @LastEditors: xfGuo
+ * @LastEditTime: 2020-09-29 17:54:09
+ */
 import React from 'react';
-import styles from './index.css';
+import styles from './index.less';
 
 export default () => {
   return (
