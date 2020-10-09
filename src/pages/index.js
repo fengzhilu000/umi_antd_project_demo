@@ -3,7 +3,7 @@
  * @Author: xfGuo
  * @Date: 2020-09-04 13:51:14
  * @LastEditors: xfGuo
- * @LastEditTime: 2020-09-30 10:21:51
+ * @LastEditTime: 2020-09-30 14:25:42
  */
 import React,{ Component } from 'react';
 import styles from './index.less';
@@ -16,6 +16,7 @@ import { history } from 'umi';
 import { connect } from 'dva';
 
 import PageIndex from '@/pages/HelloWorld/index';
+// import PageLogin from '@/pages/login/index';
 import EarthLayout from './Earth/index';
 import Earth2Layout from './Earth2/index';
 
@@ -41,6 +42,7 @@ class Index extends Component {
       index: EarthLayout,
       earth: Earth2Layout,
       pageIndex: PageIndex,
+      // pageLogin: PageLogin,
     };
   
     if(maps.hasOwnProperty(activePage)==false)
@@ -76,7 +78,7 @@ class Index extends Component {
         <portals.InPortal node={this.portalNode}>
           <Earth onRef={(ref) => { this.NscEarthRef = ref }} />
         </portals.InPortal>
-        {ModuleLayout !== undefined ? <ModuleLayout portalNode={this.portalNode}></ModuleLayout> : <pageIndex></pageIndex>}
+        {ModuleLayout !== undefined ? <ModuleLayout portalNode={this.portalNode}></ModuleLayout> : <PageIndex></PageIndex>}
       </div>
     );
   }

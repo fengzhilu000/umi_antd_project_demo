@@ -3,7 +3,7 @@
  * @Author: xfGuo
  * @Date: 2020-09-04 13:58:09
  * @LastEditors: xfGuo
- * @LastEditTime: 2020-09-30 09:19:15
+ * @LastEditTime: 2020-09-30 11:18:04
  */
 // import { defineConfig } from 'umi';
 
@@ -40,7 +40,7 @@ export default defineConfig({
   },
   alias: {
     '@': resolve(__dirname, './src'), // 解析出一个当前目录下的同级src的绝对路径
-    // '@/utils': resolve(__dirname, './src/utils'),
+    '@/utils': resolve(__dirname, './src/utils'),// 全局变量
     // '@/services': resolve(__dirname, './src/services'),
     // '@/assets': resolve(__dirname, './src/assets'),
     // '@/components': resolve(__dirname, './src/components'),
