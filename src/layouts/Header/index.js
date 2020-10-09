@@ -3,7 +3,7 @@
  * @Author: xfGuo
  * @Date: 2020-09-04 15:36:46
  * @LastEditors: xfGuo
- * @LastEditTime: 2020-09-30 10:10:55
+ * @LastEditTime: 2020-10-09 15:39:38
  */
 import React,{ Component } from 'react';
 import styles from './index.less';
@@ -16,6 +16,13 @@ import IconFont from '@/components/IconFont/index';
 
 // const { SubMenu, MenuItem } = Menu;
 
+//#region 所有选择项列表
+ const menuData = [
+    { key:'helloworld', link: '/helloworld', icon:'iconhome', name: '首页' },
+    { key:'index', link: '/?page=index', icon:'iconshengchan', name: '地图' },
+    { key:'earth', link: '/?page=earth', icon:'iconshengchan', name: 'Earth' },
+  ];
+//#endregion
 
 class Nva extends Component{
   constructor(props) {
@@ -51,8 +58,8 @@ class Nva extends Component{
     return(
       <div className={styles['nav-box']} id="navBox">
         <Menu
-        //defaultSelectedKeys={[]}
-        // defaultActiveFirst={true}
+          //defaultSelectedKeys={[]}
+          // defaultActiveFirst={true}
           // onClick={this.handleClick}
           selectedKeys={[location || '/helloworld']}
           // getPopupContainer={() => document.getElementById('navBox')}
@@ -61,7 +68,21 @@ class Nva extends Component{
           defaultSelectedKeys={['/helloworld']}
           style={{ lineHeight: '64px' }}
         >
-          <Menu.Item key="/helloworld">
+          {
+            menuData.map(menu => (
+              <Menu.Item key={`/${menu.key}`}>
+                <Link to={menu.link}>
+                  <IconFont type={menu.icon}></IconFont>
+                  <span>{menu.name}</span>
+                </Link>
+              </Menu.Item>
+              // <Menu.Item key={`/${menu.route}`}>
+              //   <Link to={menu.route}>{menu.name}</Link>
+              // </Menu.Item>
+            ))
+          }
+          
+          {/* <Menu.Item key="/helloworld">
             <Link to="/helloworld">
               <IconFont type="iconhome"></IconFont>
               <span>首页</span>
@@ -73,7 +94,8 @@ class Nva extends Component{
           <Menu.Item key="/earth">
             <Link to="/?page=earth"><IconFont type="iconshengchan"></IconFont>Earth</Link>
           </Menu.Item>
-          {/* <MenuItem key="/TruckDispatch">
+        </Menu> */}
+        {/* <MenuItem key="/TruckDispatch">
             <Link to="/?page=TruckDispatch"><IconFont type="icontruck-fill"></IconFont>车辆调度</Link>
           </MenuItem>
           <MenuItem  key="/SecurityMonitor" title="安环监测">
@@ -82,7 +104,6 @@ class Nva extends Component{
           <MenuItem  key="/users" title="视频监控">
               <Link to="/?page=users"><IconFont  type="iconanquan"></IconFont>视频监控</Link>
           </MenuItem> */}
-        </Menu>
         {/* <Menu
           theme="dark"
           mode="horizontal"
@@ -93,6 +114,7 @@ class Nva extends Component{
           <Menu.Item key="2">局内道具</Menu.Item>
           <Menu.Item key="3">召唤师技能</Menu.Item>
         </Menu> */}
+          </Menu>
       </div>
     );
   }

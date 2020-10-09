@@ -3,8 +3,19 @@
  * @Author: xfGuo
  * @Date: 2020-09-04 14:46:22
  * @LastEditors: xfGuo
- * @LastEditTime: 2020-09-30 14:40:44
+ * @LastEditTime: 2020-10-09 15:20:22
  */
+
+//keyboard 输入
+import key from 'keymaster';//yarn add react-keymaster
+
+//#region 键盘事件命名规范
+const keymasterList = {
+  ctrl_up: {title:'⌘+up', name: 'ctrl+up'},
+  ctrl_down: {title:'⌘+down', name: 'ctrl+down'},
+}
+//#endregion
+
 const GlobalModel = {
     namespace: 'global',
     state:{
@@ -32,11 +43,25 @@ const GlobalModel = {
               page: activePage });
           });
       },
+      keyEvent({dispatch}) {
+        key(`${keymasterList?.ctrl_up?.title}, ${keymasterList?.ctrl_up?.name}`, () => { 
+          debugger
+          let payload = {operator: `${keymasterList?.ctrl_up?.name}`}
+          dispatch({type:'keyEvent', payload})
+        });
+      },
     },
     reducers:{
       updatePage(state, { page }) {
         if (state.activePage !== page) {
           return { ...state, activePage: page };
+        }
+        return { ...state };
+      },
+      keyEvent(state, { payload }) {
+        debugger
+        if (payload !== undefined) {
+          console.log('keymaster-operator: ', payload.operator);
         }
         return { ...state };
       },
