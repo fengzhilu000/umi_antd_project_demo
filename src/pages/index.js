@@ -3,7 +3,7 @@
  * @Author: xfGuo
  * @Date: 2020-09-04 13:51:14
  * @LastEditors: xfGuo
- * @LastEditTime: 2020-09-30 14:25:42
+ * @LastEditTime: 2020-10-12 10:59:41
  */
 import React,{ Component } from 'react';
 import styles from './index.less';
@@ -19,7 +19,6 @@ import PageIndex from '@/pages/HelloWorld/index';
 // import PageLogin from '@/pages/login/index';
 import EarthLayout from './Earth/index';
 import Earth2Layout from './Earth2/index';
-
 
 @connect(({ global }) => {
   return {

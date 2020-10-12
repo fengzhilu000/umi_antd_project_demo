@@ -3,7 +3,7 @@
  * @Author: xfGuo
  * @Date: 2020-09-04 14:46:22
  * @LastEditors: xfGuo
- * @LastEditTime: 2020-10-10 16:30:18
+ * @LastEditTime: 2020-10-10 17:08:33
  */
 
 //keyboard 输入
@@ -50,7 +50,7 @@ const GlobalModel = {
       },
       keyEvent({dispatch}) {
         key(`${keymasterList?.ctrl_up?.title}, ${keymasterList?.ctrl_up?.name}`, () => { 
-          debugger
+          // debugger
           let payload = {operator: `${keymasterList?.ctrl_up?.name}`}
           dispatch({type:'keyEvent', payload})
         });
@@ -62,9 +62,9 @@ const GlobalModel = {
         })
       },
       setupHistory({dispatch,history}){
-        debugger
+        // debugger
         history.listen((location) => {
-          debugger
+          // debugger
           console.log(location)   //这里可以获取当前变化的history路径以及参数，hash所有值，这样就可以在路由地址变化后做处理
 
         })
@@ -80,14 +80,14 @@ const GlobalModel = {
         // return { ...state };
       },
       keyEvent(state, { payload }) {
-        debugger
+        // debugger
         if (payload !== undefined) {
           console.log('keymaster-operator: ', payload.operator);
         }
         return { ...state };
       },
       save(state, action) {
-        debugger
+        // debugger
         return { ...state, ...action.payload };
       },
     }

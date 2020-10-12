@@ -3,7 +3,7 @@
   "scripts": {
     "start": "cross-env umi dev",
     "build": "cross-env umi build",
-    "start:wh_test": "cross-env UMI_ENV=wh_test PROJECT=WH_PROJECT DesignWidth=1920 DesignHeight=1080 umi dev",
+    "start:wh_test": "cross-env UMI_ENV=wh_test PROJECT=WH_PROJECT NODE_ENV=development DesignWidth=1920 DesignHeight=1080 umi dev",
     "start:cs_test": "cross-env UMI_ENV=cs_test PROJECT=CS_PROJECT DesignWidth=3840 DesignHeight=2160 umi dev",
     "build:wh_product": "cross-env UMI_ENV=wh_product PROJECT=WH_PROJECT DesignWidth=1920 DesignHeight=1080 umi build",
     "build:cs_product": "cross-env UMI_ENV=cs_product PROJECT=CS_PROJECT DesignWidth=3840 DesignHeight=2160 umi build",
@@ -40,5 +40,9 @@
     "react-reverse-portal": "^2.0.0",
     "umi": "^3.2.19",
     "yorkie": "^2.0.0"
+  },
+  "devDependencies": {
+    "axios": "^0.20.0",
+    "mockjs": "^1.1.0"
   }
 }
